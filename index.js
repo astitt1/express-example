@@ -5,6 +5,8 @@ const port = 5000;
 
 const userRoutes = require('./routes/user')
 app.use('/user', userRoutes)
+const todoRoutes = require('./routes/todos')
+app.use('/todos', todoRoutes)
 
 app.use(express.static('./styles'));
 app.engine("perscholas", (filePath, options, callback) => {
